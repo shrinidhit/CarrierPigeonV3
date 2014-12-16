@@ -16,7 +16,8 @@ public class Wobject{
 		this.x = x;
 		this.y = y;
 	}
-	
+
+	public virtual string get_name() {return this.name;}
 	public virtual bool is_mthing() {return false;}
 	public virtual bool is_letter() {return false;}
 	public virtual bool is_building() {return false;}
