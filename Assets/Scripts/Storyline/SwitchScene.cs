@@ -9,13 +9,13 @@ public class SwitchScene : MonoBehaviour {
 	void OnTriggerEnter (Collider collider) {
 		if (collider.gameObject.name == "Player") {
 			//Object.DontDestroyOnLoad(collider.gameObject);
-			GameObject myplayer = GameObject.Find("PlayerGroup/Player");
+			GameObject myplayer = GameObject.Find("World/PlayerGroup/Player");
 			Object.Destroy(GameObject.Find("Setting"));
 			Application.LoadLevelAdditive(sceneToSwitch);
 			myplayer.transform.position = new Vector3 (0.0f, 0.0f, 0.0f);
-			//if (sceneToSwitch != "City") {
-				//myplayer.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
-			//}
+			if (sceneToSwitch != "City") {
+
+			}
 		}
 	}
 }
