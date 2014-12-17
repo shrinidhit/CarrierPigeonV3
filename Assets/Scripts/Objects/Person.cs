@@ -14,6 +14,7 @@ public class Person : Mthing {
 		//Inventory
 		this.inventory = inventory;
 		//GUI Text 
+
 		this.display = GameObject.Find("/World/PlayerGroup/TextDisplay");
 		this.display.SetActive (false);
 		this.spokentime = 0.0f;
