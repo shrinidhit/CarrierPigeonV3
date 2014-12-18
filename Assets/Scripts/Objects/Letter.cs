@@ -16,8 +16,9 @@ public class Letter : Mthing {
 	{
 		this.message = message;
 		this.location = location;
-		this.ldisplay = GameObject.Find("/World/PlayerGroup/LetterDisplay");
-		this.display = GameObject.Find("/World/PlayerGroup/TextDisplay");
+		this.physical_rep = physical_rep;
+		this.display = display;
+		this.ldisplay = ldisplay;
 	}
 	
 	public override bool is_letter() {return true;}

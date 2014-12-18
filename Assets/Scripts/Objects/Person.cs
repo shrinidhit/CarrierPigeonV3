@@ -3,9 +3,8 @@ using System.Collections;
 using System.Timers;
 
 public class Person : Mthing {
-
-	public ArrayList inventory;
 	public GameObject display;
+	public ArrayList inventory;
 	public GameObject physical_rep;
 	public float spokentime;
 
@@ -15,10 +14,8 @@ public class Person : Mthing {
 		//Inventory
 		this.inventory = inventory;
 		//GUI Text 
-
 		this.physical_rep = physical_rep;
 		this.display = display;
-		this.display.SetActive (false);
 		this.spokentime = 0.0f;
 	}
 	

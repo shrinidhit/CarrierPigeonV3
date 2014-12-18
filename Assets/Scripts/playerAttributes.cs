@@ -2,17 +2,18 @@
 using System.Collections;
 
 public class playerAttributes : MonoBehaviour {
-
+	public GameObject display;
 	private Player player;
 	public GameObject player_object;
 	private Storyline storyline;
-	public GameObject player_object;
 
 	// Use this for initialization
 	void Start () {
-		this.player = new Player ("Bob",0,0, player_object);
+		this.player = new Player ("Bob",0,0, player_object, display);
 		this.storyline = new Storyline();
 		this.player.speak("Welcome to the Game");
+		this.display = GameObject.FindWithTag("Player");
+		
 
 	}
 	

@@ -2,19 +2,25 @@
 using System.Collections;
 
 public class Four : MonoBehaviour, Node {
-
+	public static GameObject display;
 	public static GameObject bird_object;
-	public Player bird = new Player ("Bob", 0, 0, bird_object);
+	public Player bird = new Player ("Bob", 0, 0, bird_object, display);
+
 	public static GameObject owner_object;
-	public Person owner = new Person("Owner", 0, 0, owner_object);
+	public Person owner = new Person("Owner", 0, 0, owner_object, display);
+
 	public static GameObject bank_person_1_object;
-	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object);
+	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object, display);
+
 	public static GameObject bank_person_2_object;
-	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object);
+	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object, display);
+
 	public static GameObject bank_person_3_object;
-	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object);
+	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object, display);
+
 	public static GameObject accomplice_object;
-	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object, display);
+
 	public static GameObject third_letter_object;
 	public static GameObject third_letter_location;
 	public static string third_letter_message;
@@ -24,6 +30,7 @@ public class Four : MonoBehaviour, Node {
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
 
 	void Start () {
+		Four.display = GameObject.FindWithTag("Player");
 		this.enabled = false;
 	}
 

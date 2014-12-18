@@ -2,28 +2,37 @@
 using System.Collections;
 
 public class One : MonoBehaviour, Node {
+	public static GameObject display;
 	public static GameObject bird_object;
-	public Player bird = new Player ("Bob", 0, 0, bird_object, return_display());
+	public Player bird = new Player ("Bob", 0, 0, bird_object, display);
+
 	public static GameObject owner_object;
 	public Person owner = new Person("Owner", 0, 0, owner_object, display);
+
 	public static GameObject bank_person_1_object;
-	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object, return_display());
+	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object, display);
+
 	public static GameObject bank_person_2_object;
-	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object, return_display());
+	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object, display);
+
 	public static GameObject bank_person_3_object;
-	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object, return_display());
+	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object, display);
+
 	public static GameObject accomplice_object;
-	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object, return_display());
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object, display);
+
 	public static GameObject first_letter_object;
 	public static GameObject first_letter_location;
 	public static string first_letter_message;
 	public Letter first_letter = new Letter("First Letter", 0, 0, first_letter_message, first_letter_location, first_letter_object);
+
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
 	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};
 
 	void Start () {
 		this.enabled = true;
+		One.display = GameObject.FindWithTag("Player");
 	}
 	
 	void Update () {

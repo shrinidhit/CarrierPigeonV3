@@ -3,10 +3,13 @@ using System.Collections;
 
 public class Two : MonoBehaviour, Node {
 	public static GameObject display;
+
 	public static GameObject bird_object;
-	public Player bird = new Player ("Bob", 0, 0, bird_object);
+	public Player bird = new Player ("Bob", 0, 0, bird_object, display);
+
 	public static GameObject accomplice_object;
-	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object, display);
+
 	public static GameObject second_letter_object;
 	public static GameObject second_letter_location;
 	public static string second_letter_message;
@@ -18,6 +21,7 @@ public class Two : MonoBehaviour, Node {
 
 	void Start () {
 		this.enabled = false;
+		Two.display = GameObject.FindWithTag("Player");
 	}
 
 	void Update () {
