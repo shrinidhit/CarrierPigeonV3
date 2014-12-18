@@ -148,7 +148,7 @@ function UpdateSmoothedMovementDirection ()
 		movingBack = false;
 	
 	var wasMoving = isMoving;
-	isMoving = Mathf.Abs (h) > 0.1 || Mathf.Abs (v) > 0.1;
+	isMoving = Mathf.Abs (h) > 0.1 | Mathf.Abs (v) > 0.1;
 		
 	// Target direction relative to the camera
 	var targetDirection = h * right + v * forward;
@@ -190,7 +190,7 @@ function UpdateSmoothedMovementDirection ()
 		_characterState = CharacterState.Idle;
 		
 		// Pick speed modifier
-		if (Input.GetKey (KeyCode.LeftShift) | Input.GetKey (KeyCode.RightShift))
+		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
 		{
 			targetSpeed *= runSpeed;
 			_characterState = CharacterState.Running;

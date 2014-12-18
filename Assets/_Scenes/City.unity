@@ -1199,6 +1199,49 @@ Prefab:
   m_RootGameObject: {fileID: 1545629746}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &665997651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 665997652}
+  - 114: {fileID: 665997653}
+  m_Layer: 0
+  m_Name: LetterDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &665997652
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665997651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1954811129}
+  m_RootOrder: 3
+--- !u!114 &665997653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665997651}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c5ad70561ef5418935c40c425c28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guiSkin: {fileID: 11400000, guid: f022d0d02f324814b8668a05112e47d5, type: 2}
+  message: 'what happens when I type a bunch of stuff here. Please wrap please wrap
+    asdjfoiajfia sdkfljsdk faeiofjskdljf aklsd  aroiwejfklsdj flkawiofkdsfjkladjfkldsj
+    fkjioraewuj kl '
 --- !u!1 &689684133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,7 +3708,6 @@ GameObject:
   - 33: {fileID: 1388975566}
   - 20: {fileID: 1388975562}
   - 114: {fileID: 1388975563}
-  - 4: {fileID: 1388975564}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3742,8 +3784,8 @@ MonoBehaviour:
   height: 1
   heightDamping: 2
   rotationDamping: 3
---- !u!4 &1388975564
-Transform:
+--- !u!224 &1388975565
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3754,15 +3796,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1954811129}
   m_RootOrder: 0
---- !u!224 &1388975565
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1388975558}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_Position: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 229, y: 183}
   m_Pivot: {x: .5, y: .5}
 --- !u!33 &1388975566
@@ -5206,9 +5242,10 @@ Transform:
   m_LocalPosition: {x: -.979616225, y: .0581234545, z: -.112306915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1388975564}
+  - {fileID: 1388975565}
   - {fileID: 1627512604}
   - {fileID: 1955596878}
+  - {fileID: 665997652}
   m_Father: {fileID: 1121744920}
   m_RootOrder: 0
 --- !u!1 &1955596877
