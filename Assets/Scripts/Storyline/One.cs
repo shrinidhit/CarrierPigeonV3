@@ -18,6 +18,7 @@ public class One : MonoBehaviour, Node {
 	public static GameObject first_letter_location;
 	public static string first_letter_message;
 	public Letter first_letter = new Letter("First Letter", 0, 0, first_letter_message, first_letter_location, first_letter_object);
+
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
 	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};

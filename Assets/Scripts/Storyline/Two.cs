@@ -8,7 +8,6 @@ public class Two : MonoBehaviour, Node {
 	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
 	public static GameObject second_letter_object;
-
 	public static GameObject second_letter_location;
 	public static string second_letter_message;
 	public Letter second_letter = new Letter("Second Letter", 0, 0, second_letter_message, second_letter_location, second_letter_object);
