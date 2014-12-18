@@ -3,14 +3,14 @@ using System.Collections;
 
 public class Five : MonoBehaviour, Node {
 	
-	public GameObject bird_object;
+	public static GameObject bird_object;
 	public Player bird = new Player ("Bob", 0, 0, bird_object);
-	public GameObject accomplice_object;
+	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
-	public GameObject fourth_letter_object;
+	public static GameObject fourth_letter_object;
 	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, fourth_letter_object);
-	public GameObject money_object;
-	public Mthing money = new Mthing("Money", 0, 0, money);
+	public static GameObject money_object;
+	public Mthing money = new Mthing("Money", 0, 0, money_object);
 
 	private bool guiState = false;
 	private string decision = "";

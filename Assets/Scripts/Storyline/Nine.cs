@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Nine : MonoBehaviour, Node {
 
-	public GameObject bird_object;
+	public static GameObject bird_object;
 	public Player bird = new Player ("Bob", 0, 0, bird_object);
 
 	private string[] bird_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};

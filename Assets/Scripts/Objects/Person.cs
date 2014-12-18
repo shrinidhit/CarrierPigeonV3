@@ -10,7 +10,7 @@ public class Person : Mthing {
 	public float spokentime;
 
 	public Person(string name, int x, int y, GameObject physical_rep)
-		: base(name,x,y)
+		: base(name,x,y,physical_rep)
 	{
 		//Inventory
 		this.inventory = inventory;

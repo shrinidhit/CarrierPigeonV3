@@ -9,9 +9,10 @@ public class Letter : Mthing {
 	public GameObject display;
 	public GameObject ldisplay;
 	public GameObject location;
+	public GameObject physical_rep;
 
-	public Letter(string name, int x, int y, string message, GameObject location)
-		: base(name,x,y)
+	public Letter(string name, int x, int y, string message, GameObject location, GameObject physical_rep)
+		: base(name,x,y,physical_rep)
 	{
 		this.message = message;
 		this.location = location;

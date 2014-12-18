@@ -3,8 +3,8 @@ using System.Collections;
 
 public class NPC : Person {
 
-	public NPC(string name, int x, int y)
-		: base(name,x,y)
+	public NPC(string name, int x, int y, GameObject physical_rep)
+		: base(name,x,y,physical_rep)
 	{
 		
 	}

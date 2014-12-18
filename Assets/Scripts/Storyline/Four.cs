@@ -3,19 +3,19 @@ using System.Collections;
 
 public class Four : MonoBehaviour, Node {
 
-	public GameObject bird_object;
+	public static GameObject bird_object;
 	public Player bird = new Player ("Bob", 0, 0, bird_object);
-	public GameObject owner_object;
+	public static GameObject owner_object;
 	public Person owner = new Person("Owner", 0, 0, owner_object);
-	public GameObject bank_person_1_object;
+	public static GameObject bank_person_1_object;
 	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object);
-	public GameObject bank_person_2_object;
+	public static GameObject bank_person_2_object;
 	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object);
-	public GameObject bank_person_3_object;
+	public static GameObject bank_person_3_object;
 	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object);
-	public GameObject accomplice_object;
+	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
-	public GameObject third_letter_object;
+	public static GameObject third_letter_object;
 	public Letter third_letter = new Letter("Third Letter", 0, 0, third_letter_object);
 
 	private Vector3[] accomplice_locations = new Vector3[] {new Vector3(0.0f,0.0f,0.0f),new Vector3(0.1f,0.1f,0.1f)};

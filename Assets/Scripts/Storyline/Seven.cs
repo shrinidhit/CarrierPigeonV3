@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Seven : MonoBehaviour, Node {
 
-	public GameObject bird_object;
+	public static GameObject bird_object;
 	public Player bird = new Player ("Bob", 0, 0, bird_object);
-	public GameObject owner_object;
-	public Person owner = new Person ("Owner", 0, 0, accomplice_object);
-	public GameObject money_object;
-	public Mthing money = new Letter("Money", 0, 0, money);
+	public static GameObject owner_object;
+	public Person owner = new Person ("Owner", 0, 0, owner_object);
+	public static GameObject money_object;
+	public Mthing money = new Letter("Money", 0, 0, money_object);
 
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 
