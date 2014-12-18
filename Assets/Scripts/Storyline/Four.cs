@@ -16,9 +16,11 @@ public class Four : MonoBehaviour, Node {
 	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
 	public static GameObject third_letter_object;
+
 	public static GameObject third_letter_location;
 	public static string third_letter_message;
 	public Letter third_letter = new Letter("Third Letter", 0, 0, third_letter_message, third_letter_location, third_letter_object);
+
 	private Vector3[] accomplice_locations = new Vector3[] {new Vector3(0.0f,0.0f,0.0f),new Vector3(0.1f,0.1f,0.1f)};
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
