@@ -17,7 +17,6 @@ public class Five : MonoBehaviour, Node {
 	private bool guiState = false;
 	private string decision = "";
 	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};
-
 	
 	void Start () {
 		this.enabled = false;

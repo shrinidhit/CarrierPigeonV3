@@ -4,6 +4,7 @@ using System.Collections;
 public class playerAttributes : MonoBehaviour {
 
 	private Player player;
+	public GameObject player_object;
 	private Storyline storyline;
 	public GameObject player_object;
 
