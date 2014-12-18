@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Player : Person {
 
-	public Player(string name, int x, int y, GameObject physical_rep)
-		: base(name,x,y,physical_rep)
+	public Player(string name, int x, int y, GameObject physical_rep, GameObject display)
+		: base(name,x,y,physical_rep, display)
 	{
 		
 	}

@@ -2,13 +2,15 @@
 using System.Collections;
 
 public class Five : MonoBehaviour, Node {
-	
+	public static GameObject display;
 	public static GameObject bird_object;
-	public Player bird = new Player ("Bob", 0, 0, bird_object);
+	public Player bird = new Player ("Bob", 0, 0, bird_object, display);
 	public static GameObject accomplice_object;
-	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object, display);
 	public static GameObject fourth_letter_object;
-	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, fourth_letter_object);
+	public static GameObject fourth_letter_location;
+	public static string fourth_letter_message;
+	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, fourth_letter_message, fourth_letter_location, fourth_letter_object);
 	public static GameObject money_object;
 	public Mthing money = new Mthing("Money", 0, 0, money_object);
 
@@ -43,7 +45,7 @@ public class Five : MonoBehaviour, Node {
 		bird.add_to_inventory (money);
 	}
 
-	string get_player_input() {
+	void get_player_input() {
 		guiState = true;
 	}
 	

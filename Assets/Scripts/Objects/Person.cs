@@ -9,7 +9,7 @@ public class Person : Mthing {
 	public GameObject physical_rep;
 	public float spokentime;
 
-	public Person(string name, int x, int y, GameObject physical_rep)
+	public Person(string name, int x, int y, GameObject physical_rep, GameObject display)
 		: base(name,x,y,physical_rep)
 	{
 		//Inventory
@@ -17,7 +17,7 @@ public class Person : Mthing {
 		//GUI Text 
 
 		this.physical_rep = physical_rep;
-		this.display = GameObject.Find("/World/PlayerGroup/TextDisplay");
+		this.display = display;
 		this.display.SetActive (false);
 		this.spokentime = 0.0f;
 	}

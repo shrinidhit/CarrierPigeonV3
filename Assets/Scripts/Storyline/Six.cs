@@ -15,7 +15,7 @@ public class Six : MonoBehaviour, Node {
 		get_player_input ();
 	}
 	
-	string get_player_input() {
+	void get_player_input() {
 		guiState = true;
 	}
 	

@@ -5,10 +5,11 @@ public class playerAttributes : MonoBehaviour {
 
 	private Player player;
 	private Storyline storyline;
+	public GameObject player_object;
 
 	// Use this for initialization
 	void Start () {
-		this.player = new Player ("Bob",0,0);
+		this.player = new Player ("Bob",0,0, player_object);
 		this.storyline = new Storyline();
 		this.player.speak("Welcome to the Game");
 
