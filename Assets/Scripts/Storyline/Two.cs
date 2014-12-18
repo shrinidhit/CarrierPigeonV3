@@ -8,7 +8,7 @@ public class Two : MonoBehaviour, Node {
 	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
 	public static GameObject second_letter_object;
-	public Letter second_letter = new Letter("Second Letter", 0, 0, second_letter_object);
+	public Letter second_letter = new Letter("Second Letter", 0, 0, null, null, second_letter_object);
 	
 	private bool guiState = false;
 	private string decision = "";

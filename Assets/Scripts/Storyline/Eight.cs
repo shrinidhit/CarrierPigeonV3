@@ -23,7 +23,6 @@ public class Eight : MonoBehaviour, Node {
 		end_story ();	
 	}
 
-
 	void police_speaks (Person police, string phrase) {
 		police.speak(phrase);
 	}

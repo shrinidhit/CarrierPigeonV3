@@ -16,7 +16,7 @@ public class One : MonoBehaviour, Node {
 	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
 	public static GameObject first_letter_object;
-	public Letter first_letter = new Letter("First Letter", 0, 0, first_letter_object);
+	public Letter first_letter = new Letter("First Letter", 0, 0, null, null, first_letter_object);
 
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
@@ -28,7 +28,7 @@ public class One : MonoBehaviour, Node {
 	
 	void Update () {
 		//Needs some if statements and stuff
-		letter_to_inventory (first_letter);
+		letter_to_inventory (owner, bird, first_letter);
 		owner_speaks(owner, owner_phrases[Random.Range(0,owner_phrases.Length)]);
 		bank_person_speaks (bank_person_1, bank_person_phrases [Random.Range (0, bank_person_phrases.Length)]);
 		bank_person_speaks (bank_person_2, bank_person_phrases [Random.Range (0, bank_person_phrases.Length)]);

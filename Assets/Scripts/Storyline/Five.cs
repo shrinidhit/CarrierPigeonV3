@@ -8,14 +8,13 @@ public class Five : MonoBehaviour, Node {
 	public static GameObject accomplice_object;
 	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
 	public static GameObject fourth_letter_object;
-	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, fourth_letter_object);
+	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, null, null, fourth_letter_object);
 	public static GameObject money_object;
 	public Mthing money = new Mthing("Money", 0, 0, money_object);
 
 	private bool guiState = false;
 	private string decision = "";
 	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};
-
 	
 	void Start () {
 		this.enabled = false;
@@ -43,7 +42,7 @@ public class Five : MonoBehaviour, Node {
 		bird.add_to_inventory (money);
 	}
 
-	string get_player_input() {
+	void get_player_input() {
 		guiState = true;
 	}
 	

@@ -4,11 +4,12 @@ using System.Collections;
 public class playerAttributes : MonoBehaviour {
 
 	private Player player;
+	public GameObject player_object;
 	private Storyline storyline;
 
 	// Use this for initialization
 	void Start () {
-		this.player = new Player ("Bob",0,0);
+		this.player = new Player ("Bob",0,0,player_object);
 		this.storyline = new Storyline();
 		this.player.speak("Welcome to the Game");
 
