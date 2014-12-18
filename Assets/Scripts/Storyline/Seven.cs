@@ -8,7 +8,7 @@ public class Seven : MonoBehaviour, Node {
 	public static GameObject owner_object;
 	public Person owner = new Person ("Owner", 0, 0, owner_object);
 	public static GameObject money_object;
-	public Mthing money = new Letter("Money", 0, 0, money_object);
+	public Mthing money = new Mthing("Money", 0, 0, money_object);
 
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 

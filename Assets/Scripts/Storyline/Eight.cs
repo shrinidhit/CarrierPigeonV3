@@ -8,7 +8,7 @@ public class Eight : MonoBehaviour, Node {
 	public static GameObject police_object;
 	public Person police = new Person("Police", 0, 0, police_object);
 	public static GameObject money_object;
-	public Mthing money = new Letter("Money", 0, 0, money_object);
+	public Mthing money = new Mthing("Money", 0, 0, money_object);
 
 	private string[] police_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 
