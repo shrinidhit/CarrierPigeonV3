@@ -9,7 +9,7 @@ public class Seven : MonoBehaviour, Node {
 	
 	// Use this for initialization
 	void Start () {
-	
+		this.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class Seven : MonoBehaviour, Node {
 
 
 
-	void give_money_to_owner (Person owner, Person bird, GameObject money) {
+	void give_money_to_owner (Person owner, Person bird, Wobject money) {
 		owner.add_to_inventory (money);
 		bird.remove_from_inventory (money);
 	}

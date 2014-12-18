@@ -26,11 +26,11 @@ public class Person : Mthing {
 		this.inventory.Add(item);
 	}
 
-	public void remove_from_inventory(string name) {
-		foreach(Wobject item in this.inventory)
+	public void remove_from_inventory(Wobject item) {
+		foreach(Wobject thing in this.inventory)
 		{
-			if (item.get_name() == name) {
-				this.inventory.Remove(item);
+			if (thing.get_name() == item.get_name()) {
+				this.inventory.Remove(thing);
 			}
 		}
 	}

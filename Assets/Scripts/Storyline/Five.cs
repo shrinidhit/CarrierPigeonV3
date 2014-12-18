@@ -15,7 +15,7 @@ public class Five : MonoBehaviour, Node {
 
 	// Use this for initialization
 	void Start () {
-	
+		this.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,12 +29,12 @@ public class Five : MonoBehaviour, Node {
 		//accomplice.say(phrase);
 	}
 
-	void accomplice_gives_letter (Person accomplice, Person bird, GameObject letter) {
+	void accomplice_gives_letter (Person accomplice, Person bird, Wobject letter) {
 		accomplice.remove_from_inventory (letter);
 		bird.add_to_inventory (letter);
 	}
 
-	void money_to_inventory (Person accomplice, Person bird, GameObject money) {
+	void money_to_inventory (Person accomplice, Person bird, Wobject money) {
 		accomplice.remove_from_inventory (money);
 		bird.add_to_inventory (money);
 	}

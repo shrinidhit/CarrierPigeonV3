@@ -13,12 +13,12 @@ public class Two : MonoBehaviour, Node {
 
 	// Use this for initialization
 	void Start () {
-	
+		this.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		//Debug.Log ("Node 2 is enabled");
 	}
 
 
@@ -28,12 +28,12 @@ public class Two : MonoBehaviour, Node {
 		//accomplice.say (phrase);
 	}
 
-	void accomplice_takes_letter (Person accomplice, Person bird, GameObject letter) {
+	void accomplice_takes_letter (Person accomplice, Person bird, Wobject letter) {
 		accomplice.add_to_inventory (letter);
 		bird.remove_from_inventory (letter);
 	}
 	
-	void accomplice_gives_letter (Person accomplice, Person bird, GameObject letter) {
+	void accomplice_gives_letter (Person accomplice, Person bird, Wobject letter) {
 		bird.add_to_inventory (letter);
 		accomplice.remove_from_inventory (letter);
 	}

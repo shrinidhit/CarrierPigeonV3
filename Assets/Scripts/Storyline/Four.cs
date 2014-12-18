@@ -6,7 +6,7 @@ public class Four : MonoBehaviour, Node {
 
 	public Person owner;
 	public Person bird;
-	public Person accomplice;
+	public GameObject accomplice;
 	public Wobject letter;
 
 	private Vector3[] accomplice_locations = new Vector3[] {new Vector3(0.0f,0.0f,0.0f),new Vector3(0.1f,0.1f,0.1f)};
@@ -15,7 +15,7 @@ public class Four : MonoBehaviour, Node {
 
 	// Use this for initialization
 	void Start () {
-
+		this.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -31,7 +31,7 @@ public class Four : MonoBehaviour, Node {
 		//owner.say(phrase);
 	}
 
-	void letter_to_inventory (Person owner, Person bird, GameObject letter) {
+	void letter_to_inventory (Person owner, Person bird, Wobject letter) {
 		owner.remove_from_inventory (letter);
 		bird.add_to_inventory (letter);
 

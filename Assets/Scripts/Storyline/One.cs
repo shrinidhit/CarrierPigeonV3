@@ -17,29 +17,29 @@ public class One : MonoBehaviour, Node {
 	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};
 
 	void Start () {
-
+		this.enabled = true;
 	}
 	
 	void Update () {
-	
+
 	}
 
 
-	void letter_to_inventory(Person owner, Person bird, GameObject letter) {
+	void letter_to_inventory(Person owner, Person bird, Wobject letter) {
 		owner.remove_from_inventory (letter);
 		bird.add_to_inventory (letter);
 	}
 
 
-	void owner_speaks(GameObject owner, string phrase) {
+	void owner_speaks(Person owner, string phrase) {
 		//owner.say(phrase);
 	}
 
-	void bank_person_speaks(GameObject person, string phrase) {
+	void bank_person_speaks(Person person, string phrase) {
 		//person.say(phrase);
 	}
 
-	void accomplice_speaks(GameObject accomplice, string phrase) {
+	void accomplice_speaks(Person accomplice, string phrase) {
 		//accomplice.say(phrase);
 	}
 

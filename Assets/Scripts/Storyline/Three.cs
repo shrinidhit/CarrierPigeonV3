@@ -7,7 +7,7 @@ public class Three : MonoBehaviour, Node {
 
 	// Use this for initialization
 	void Start () {
-	
+		this.enabled = false;
 	}
 	
 	// Update is called once per frame
