@@ -6,15 +6,17 @@ public class Person : Mthing {
 
 	public ArrayList inventory;
 	public GameObject display;
+	public GameObject physical_rep;
 	public float spokentime;
 
-	public Person(string name, int x, int y)
+	public Person(string name, int x, int y, GameObject physical_rep)
 		: base(name,x,y)
 	{
 		//Inventory
 		this.inventory = inventory;
 		//GUI Text 
 
+		this.physical_rep = physical_rep;
 		this.display = GameObject.Find("/World/PlayerGroup/TextDisplay");
 		this.display.SetActive (false);
 		this.spokentime = 0.0f;

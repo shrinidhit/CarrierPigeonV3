@@ -3,64 +3,60 @@ using System.Collections;
 
 public class Five : MonoBehaviour, Node {
 	
-	public Person bird;
-	public Person accomplice;
-	public Wobject money;
-	public Wobject letter;
+	public GameObject bird_object;
+	public Player bird = new Player ("Bob", 0, 0, bird_object);
+	public GameObject accomplice_object;
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
+	public GameObject fourth_letter_object;
+	public Letter fourth_letter = new Letter("Fourth Letter", 0, 0, fourth_letter_object);
+	public GameObject money_object;
+	public Mthing money = new Mthing("Money", 0, 0, money);
 
 	private bool guiState = false;
-	private bool buttonClicked = false;
 	private string decision = "";
+	private string[] accomplice_phrases = new string[] {"Here, take this letter.","Take this letter.","Bring this letter to your owner."};
 
-
-	// Use this for initialization
+	
 	void Start () {
 		this.enabled = false;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-	
+		//Needs some if statements and stuff
+		accomplice_speaks (accomplice, accomplice_phrases [Random.Range (0, accomplice_phrases.Length)]);
+		accomplice_gives_letter (accomplice, bird, fourth_letter);
+		money_to_inventory (accomplice, bird, money);
+		get_player_input ();
 	}
-
-
 
 	void accomplice_speaks (Person accomplice, string phrase) {
-		//accomplice.say(phrase);
+		accomplice.speak(phrase);
 	}
 
-	void accomplice_gives_letter (Person accomplice, Person bird, Wobject letter) {
+	void accomplice_gives_letter (Person accomplice, Person bird, Mthing letter) {
 		accomplice.remove_from_inventory (letter);
 		bird.add_to_inventory (letter);
 	}
 
-	void money_to_inventory (Person accomplice, Person bird, Wobject money) {
+	void money_to_inventory (Person accomplice, Person bird, Mthing money) {
 		accomplice.remove_from_inventory (money);
 		bird.add_to_inventory (money);
 	}
 
 	string get_player_input() {
 		guiState = true;
-		while (buttonClicked == false) {
-			
-		}
-		guiState = false;
-		return decision;
 	}
 	
 	void OnGUI () {
 		if (guiState) {
-			// Make a background box
 			GUI.Box (new Rect (10, 10, 100, 90), "Options");
-			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
 			if (GUI.Button (new Rect (20, 40, 80, 20), "Yes")) {
 				decision = "Yes";
-				buttonClicked = true;
+				guiState = false;
 			}
-			// Make the second button.
 			if (GUI.Button (new Rect (20, 70, 80, 20), "No")) {
 				decision = "No";
-				buttonClicked = true;
+				guiState = false;
 			}
 		}
 	}

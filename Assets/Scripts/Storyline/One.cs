@@ -2,15 +2,21 @@
 using System.Collections;
 
 public class One : MonoBehaviour, Node {
-	// Use this for initialization
 
-	public Person owner;
-	public Person bird;
-	public Person bank_person_1;
-	public Person bank_person_2;
-	public Person bank_person_3;
-	public Person accomplice;
-	public Wobject letter;
+	public GameObject bird_object;
+	public Player bird = new Player ("Bob", 0, 0, bird_object);
+	public GameObject owner_object;
+	public Person owner = new Person("Owner", 0, 0, owner_object);
+	public GameObject bank_person_1_object;
+	public Person bank_person_1 = new Person ("Joe", 0, 0, bank_person_1_object);
+	public GameObject bank_person_2_object;
+	public Person bank_person_2 = new Person ("Bob", 0, 0, bank_person_2_object);
+	public GameObject bank_person_3_object;
+	public Person bank_person_3 = new Person ("Lucy", 0, 0, bank_person_3_object);
+	public GameObject accomplice_object;
+	public Person accomplice = new Person ("Accomplice", 0, 0, accomplice_object);
+	public GameObject first_letter_object;
+	public Letter first_letter = new Letter("First Letter", 0, 0, first_letter_object);
 
 	private string[] owner_phrases = new string[] {"Here, take this letter to my friend at the bank.","Take this letter.","Here's a letter."};
 	private string[] bank_person_phrases = new string[] {"Hi there!","Oh look, a bird.","Ew, go away."};
@@ -21,26 +27,30 @@ public class One : MonoBehaviour, Node {
 	}
 	
 	void Update () {
-
+		//Needs some if statements and stuff
+		letter_to_inventory (first_letter);
+		owner_speaks(owner, owner_phrases[Random.Range(0,owner_phrases.Length)]);
+		bank_person_speaks (bank_person_1, bank_person_phrases [Random.Range (0, bank_person_phrases.Length)]);
+		bank_person_speaks (bank_person_2, bank_person_phrases [Random.Range (0, bank_person_phrases.Length)]);
+		bank_person_speaks (bank_person_3, bank_person_phrases [Random.Range (0, bank_person_phrases.Length)]);
+		accomplice_speaks (accomplice, accomplice_phrases [Random.Range (0, accomplice_phrases.Length)]);
 	}
 
-
-	void letter_to_inventory(Person owner, Person bird, Wobject letter) {
+	void letter_to_inventory(Person owner, Person bird, Mthing letter) {
 		owner.remove_from_inventory (letter);
 		bird.add_to_inventory (letter);
 	}
 
-
 	void owner_speaks(Person owner, string phrase) {
-		//owner.say(phrase);
+		owner.speak(phrase);
 	}
 
 	void bank_person_speaks(Person person, string phrase) {
-		//person.say(phrase);
+		person.speak(phrase);
 	}
 
 	void accomplice_speaks(Person accomplice, string phrase) {
-		//accomplice.say(phrase);
+		accomplice.speak(phrase);
 	}
 
 }
